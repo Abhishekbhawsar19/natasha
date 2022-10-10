@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:200px ;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="b-test">
+            <button id="Decrement-btn">-</button>
+
+        </div>
+        <div id="count">0</div>
+             <div class="b-test">
+            <button  id="increment-btn">+</button>
+        </div>
+
+    </div>
+    <script>
+        let initial = 0;
+        
+   let c= document.getElementById("count");
+let a =document.getElementById("Decrement-btn").addEventListener("click",ondecrementHandler);
+
+        function ondecrementHandler(){
+          
+            if(initial>0){
+                initial=initial-1;
+            }
+            else{
+                initial=initial;
+            }
+            c.innerHTML=initial;
+            console.log(initial);
+        }
+        let b =document.getElementById("increment-btn").addEventListener("click",onclickHandler);
+        function onclickHandler(){
+            initial=initial+1;
+            c.innerHTML=initial;
+            console.log(initial);
+        }
+  
+        
+        
+    </script>
+</body>
+</html>
